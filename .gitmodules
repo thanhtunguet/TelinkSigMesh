@@ -1,3 +1,4 @@
 [submodule "TelinkSigMeshLib"]
 	path = TelinkSigMeshLib
-	url = git@github.com:thanhtunguet/TelinkSigMeshLib.git
+	url = https://github.com/thanhtunguet/TelinkSigMeshLib.git
+	
