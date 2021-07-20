@@ -2,9 +2,9 @@ name: iOS starter workflow
 
 on:
   push:
-    branches: [ master ]
+    branches: [master]
   pull_request:
-    branches: [ master ]
+    branches: [master]
 
 jobs:
   build:
@@ -16,8 +16,7 @@ jobs:
         uses: actions/checkout@v2
       - name: Clone library
         run: |
-          rm -rf ../TelinkSigMeshLib
-          git clone https://github.com/thanhtunguet/TelinkSigMeshLib.git ../TelinkSigMeshLib
+          git submodule update --init
       - name: Set Default Scheme
         run: |
           scheme_list=$(xcodebuild -list -json | tr -d "\n")
